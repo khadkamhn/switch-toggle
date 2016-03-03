@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Switch Toggle</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=1">
+<link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Roboto:300">
+<style>
+body{
+	margin:0;
+	color:#444;
+	background:#212121;
+	font:300 18px/18px Roboto, sans-serif;
+}
+*,:after,:before{box-sizing:border-box}
+.pull-left{float:left}
+.pull-right{float:right}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+
+.switch-title{
+	color:#eee;
+	padding:30px;
+	font-size:28px;
+	text-align:center;
+}
+
+.switch-wrap{
+	margin:auto;
+	width:400px;
+	padding:30px;
+	text-align:center;
+	background:#383e47;
+}
+
+.switch{
+	display:none;
+}
+.switch + label{
+	width:70px;
+	height:35px;
+	position:relative;
+	background:#212121;
+	border-radius:35px;
+	display:inline-block;
+	border:3px solid #fff;
+	transition:all .4s ease-in-out 0s;
+}
+.switch + label:before{
+	top:50%;
+	content:'';
+	right:38px;
+	width:23px;
+	height:23px;
+	background:#fff;
+	border-radius:50%;
+	position:absolute;
+	margin-top:-11.5px;
+	transition:inherit;
+}
+.switch:checked + label{
+	background:#212121;
+	border-color:#212121;
+	box-shadow:0 1px 1px rgba(206,206,206,.5);
+}
+.switch:checked + label:before{
+	right:3px;
+	background:#cecece;
+	border-color:transparent;
+	box-shadow:0 3px 3px #000;
+}
+</style>
+</head>
+<body>
+
+<div class="switch-title">Switch Toggle</div>
+
+<div class="switch-wrap">
+
+<input class="switch" id="check1" type="checkbox"><label for="check1">&nbsp;</label>
+
+</div>
+</body>
+</html>
